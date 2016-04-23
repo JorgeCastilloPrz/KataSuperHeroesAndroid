@@ -42,8 +42,7 @@ class SuperHeroesAdapter extends RecyclerView.Adapter<RecyclerView.ViewHolder> {
   }
 
   @Override public RecyclerView.ViewHolder onCreateViewHolder(ViewGroup parent, int viewType) {
-    View view =
-        LayoutInflater.from(parent.getContext()).inflate(R.layout.super_hero_row, parent, false);
+    View view = LayoutInflater.from(parent.getContext()).inflate(R.layout.super_hero_row, parent, false);
     return new SuperHeroViewHolder(view, presenter);
   }
 
