@@ -166,11 +166,13 @@ public class MainActivityTest {
 
     private void givenThereAreSomeSuperHeroes(final int count) {
         when(repository.getByName(PREMIUM_SUPER_HERO_BASE_NAME + 0)).thenReturn(buildPremiumSuperHero(0));
-        when(repository.getAll()).thenReturn(new ArrayList<SuperHero>() {{
-            for (int i = 0; i < count; i++) {
-                add(buildPremiumSuperHero(i));
+        when(repository.getAll()).thenReturn(new ArrayList<SuperHero>() {
+            {
+                for (int i = 0; i < count; i++) {
+                    add(buildPremiumSuperHero(i));
+                }
             }
-        }});
+        });
     }
 
     private SuperHero buildPremiumSuperHero(int i) {
